@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="xyz.css">
+    <style>
+        *{
+            margin: 0%;
+        }
+         .into{
+             color:black; 
+             padding-left :420px;
+            width:50%;
+            height: 50%;
+            padding-top: 10px;
+            padding-left: 550px;
+            
+        }
+        .a2{
+            height: 8vh;
+            width: 100%;
+            display: flex;
+            font-family:sans-serif; 
+            background: -webkit-linear-gradient(to right, #155799, #159957);  
+           background: linear-gradient(to right, #155799, #159957); 
+           color:whitesmoke;
+        }
+        .a3{
+            width:50%; 
+            height: 10%; 
+            display: flex; 
+            justify-content: flex-end; 
+            padding: 15px 10px;
+            color: azure;
+        }
+        .a3 a{
+            color:white;
+            padding: 5px 12px;
+            text-decoration: none;
+        }
+    </style>
+    <title>Login page in HTML</title>
+</head>
+<body>
+    <div class="a2">
+        <div  class="into"><p style="font-size: 30px;">Skedulo</p></div>
+        <div class="a3"> 
+            <a href="home.html">Home</a> 
+            <a href="contact.html">Contact Us</a> 
+        </div> 
+    </div>
+    <form action="">
+        <div class="mainContainer">
+            <h1>Login Page</h1>
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <br><br>
+            <label for="pswrd">Password</label>
+            <input type="password" placeholder="Enter Password" name="pswrd" required>
+            <div class="subcontainer">
+                <label>
+                  <input type="checkbox"  name="remember"> Remember me
+                </label>
+                <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
+            </div>
+            <button type="submit">Login</button>
+            <p class="register">Not a member?  <a href="signup.html">Register here!</a></p>
+            <button type="submit"><a class="a1" href="home.html">Home</a></button>
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+   <form>
+    <fieldset style="width: 50%; margin-left: 20%;">
+        <legend>Personal details</legend>
+        <table>
+            <tr>
+                <th><label for="fname">First name:</label></th>
+                <td><input type="text" id="fname" name="fname" required><br><br></td>
+            </tr>
+            <tr>
+                <th> <label for="lname">Last name:</label></th>
+               <td> <input type="text" id="lname" name="lname" required><br><br></td>
+            </tr>
+               
+            <tr>
+                <th><label for="email">Email:</label></th>
+                <td><input type="email" id="email" name="email" required><br><br></td>
+            </tr>
+                
+            <tr>
+                <th> <label for="Phno">Phno:</label></th>
+                |<td><input type="text" id="phno" name="mobilenumber" required><br><br></td>
+            </tr>
+               
+            <tr>
+                <th><label for="birthday">Birthday:</label></th>
+                
+                <td><input type="date" id="birthday" name="birthday"><br><br></td>
+            </tr>
+        </table>
+            <input type="submit" value="Submit">
+    </fieldset>
+    <fieldset>
+        <legend>Educational details</legend>
+        <table border="1">
+            <tr>
+                <th colspan="2">Qualification</th>
+                <th>Institute/Board</th>
+                <th>Year of passing</th>
+                <th>Percentage</th>
+            </tr>
+            <tr>
+                <th> <label for="Degree">Degree:</label></th>
+                <td>
+                    <select id="degree" name="degree">
+                        <option selected disabled>Select degree</option>
+                        <option value="M.tech" id="degree">M.tech</option>
+                        <option value="B.Tech" id="degree">B.Tech </option>
+                        <option value="MBA" id="degree">MBA</option>
+                        <option value="MCA" id="degree">B arch</option>
+                        <option value="MBA" id="degree">MSC</option>
+                        <option value="MBA" id="degree">MCA</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="College" name="Intitute">
+                        <option selected disabled>Select College</option>
+                        <option value="col" id="College">K L University</option>
+                        <option value="col" id="College">JNTU</option>
+                        <option value="col" id="College">AU</option>
+                        <option value="col" id="College">Vignan</option>
+                        <option value="col" id="College">SRM</option>
+                        <option value="col" id="College">LPU</option>
+                        <option value="col" id="College">VIT</option>
+                        <option value="col" id="College">Usharama</option>
+                    </select>
+                </td>
+                 
+                
+            </tr>
+        </table>
+    </fieldset>
+   </form>
+</body>
+</html>
