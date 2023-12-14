@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin:0%;
+            padding:0%;
+            box-sizing: border-box;
+        }
+        body{
+            font-family:sans-serif;
+            background-color: rgb(230, 111, 111);
+            background-image: url("bt.jpg");
+            background-size: 100vw 100vh;
+        }
+        h1{
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-bottom: 10px;
+            }
+        form{
+            width:35rem;
+            height:85vh;
+            margin: auto;
+            color:whitesmoke;
+            background-color: rgba(11, 15, 13, 0.582);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            margin-top:40px;
+            padding:30px 120px;
+        }
+        input[type=text], input[type=password]{
+            width: 100%;
+            margin: 8px 0px;
+            border-radius: 20px;
+            padding: 10px 30px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #030804;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 25px;
+            margin: 7px 0;
+            width: 100%;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .a1{
+            text-decoration: none;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+        .mainContainer{
+            padding: 16px;
+        }
+        .subcontainer{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .subcontainer a{
+            margin-top: 10px;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        span.forgotpsd a {
+            float: right;
+            color: whitesmoke;
+            padding-top: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .forgotpsd a{
+            color: rgb(74, 146, 235);
+        }
+        .forgotpsd a:link{
+            text-decoration: none;
+        }
+
+        .register{
+            color: white;
+            text-align: center;
+        }
+        .register a{
+            color: rgb(74, 146, 235);
+        }
+        .register a:link{
+            text-decoration: none;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <form action="">
+        <div class="mainContainer">
+            <h1>Login Page</h1>
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <br><br>
+            <label for="pswrd">Password</label>
+            <input type="password" placeholder="Enter Password" name="pswrd" required>
+            <div class="subcontainer">
+                <label>
+                  <input type="checkbox"  name="remember"> Remember me
+                </label>
+                <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
+            </div>
+            <button type="submit">Login</button>
+            <p class="register">Not a member?  <a href="signup.html">Register here!</a></p>
+            <button type="submit"><a class="a1" href="home.html">Home</a></button>
+        </div>
+
+    </form>
+</body>
+</html>
