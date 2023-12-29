@@ -18,9 +18,10 @@
             align-items: center;
         }
         .mnav{
-            width:30%;
+            width:35%;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             display: flex;
+            padding-left: 10px;
             justify-content: space-evenly;
             align-items: center;
             position: relative;
@@ -232,7 +233,8 @@
         tr,td,th{
             height:40px;
             border: 2px solid rgb(186, 184, 184);
-            text-align: center;
+            text-align: left;
+            padding-left: 2px;
         }
         td{
             vertical-align: middle;
@@ -257,7 +259,118 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin-bottom: 10px;
             padding: 10px;
-        }   
+        }
+        footer{
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 30px;
+            width:100%;
+            height:60vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            background-image: url("footer.jpg");
+            background-size: 100% 100%;
+        }
+            .hyd,.bang,.chen,.about{
+                margin-top: 30px;
+                width:20%;
+                height: 50vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+            .one,.two,.three,.four{
+                display: flex;
+                height:40vh;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: flex-start;
+            }
+            .one p,.two p,.three p{
+                padding-bottom: 8px;
+                color: antiquewhite;
+                font-size: 16px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            #h3{
+                text-align: left;
+                padding-bottom: 10px;
+                border-bottom: 2px solid green;
+                color: aqua;
+                font-size: 17px;
+                font-weight: 600;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .fa-solid{
+                color: #eb7a24;
+            }
+            .aa{
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            a:hover{
+                color: blue;
+            }
+            .aa p{
+                display: flex;
+                justify-content: space-evenly;
+                padding-left: 10px;
+                padding-top: 10px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            .aa a{
+                text-decoration: none;
+                color: #fbfbfb;
+            }
+            .aa a:hover{
+                color: blue;
+            }
+            .four a{
+                text-decoration: none;
+                color: #fbfbfb;
+                font-size: 16px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                padding-bottom: 10px;
+                position: relative;
+                transition: transform .5s;
+            }
+
+            .four a:hover
+            {
+                transform: translateX(20px);
+            }
+            .four a:nth-child(1)
+            {
+                padding-top: 20px;
+            }
+
+            .four a::before
+            {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 3px;
+                border-radius: 1.5px;
+                background-color: orangered;
+                top:8px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all .5s;
+            }
+
+            .four a:nth-child(1):before
+            {
+                top: 28px;
+            }
+            .four a:hover::before{
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(-20px);
+            } 
     </style>
 </head>
 <body>
@@ -273,7 +386,7 @@
             </div>
         </div>
         <div class="mlinks">
-            <a href="addmission.html">Admission</a>
+            <a href="#">Admission</a>
             <a href="vlogin.html">Student login</a>
             <a href="#">Apply Online</a>
             <a href="#">Quick Enquiry</a>
@@ -281,7 +394,7 @@
         </div>
     </nav>
     <div class="nav">
-        <img src="vector.png" class="logo">
+        <a href="vector.html"><img src="vector.png" class="logo"></a>
         <div class="links">
             <a href="#">Institute</a>
             <a href="#">Embedded Systems</a>
@@ -446,6 +559,77 @@
         </div>
     </div>
     <p id="p2">Candidates seeking admission into VECTOR Institute can apply online for Entrance test at <a href="http://www.vectorindia.org/registration">http://www.vectorindia.org/registration</a> or <a href="mail to info@vectorindia.org">mail to info@vectorindia.org</a> for further details.</p>
+
+    <footer>
+        <div class="hyd">
+            <h3 id="h3">Hyderabad</h3>
+            <div class="one">
+                <p>#502, Nagasuri Plaza, Behind Maithrivanam, Ameerpet, Hyderabad - 500038.</p>
+                <div class="aa">
+                    <i class="fa-solid fa-phone fa-xs"></i>
+                    <p><a href="tel:+91 98666 66699">+91 98666 66699</a></p>
+                </div>
+                <div class="aa">
+                    <i class="fa-solid fa-headset fa-xs"></i>
+                    <p><a href="tel:040 23 73 6669">040 23 73 6669</a></p>
+                </div>
+                <div class="aa">
+                    <i class="fa-solid fa-envelope fa-xs"></i>
+                    <p><a href="mailto:info.vectorindia.org">info@vectorindia.org</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="bang">
+            <h3 id="h3">Bangalore </h3>
+            <div class="two">
+                <p>33/49, 27th Cross, 12th Main, Jayanagar 4th block, Bangalore - 560011.</p>
+                <div class="aa">
+                    <i class="fa-solid fa-phone fa-xs"></i>
+                    <p><a href="tel:+91 87624 56789">+91 87624 56789</a></p>
+                </div>
+                <div class="aa">
+                    <i class="fa-solid fa-headset fa-xs"></i>
+                    <p><a href="tel:080 26546474">080 26546474</a></p>
+                </div>
+                <div class="aa">
+                    <i class="fa-solid fa-envelope fa-xs"></i>
+                    <p><a href="mailto:info.blr@vectorindia.org">info.blr@vectorindia.org</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="chen">
+            <h3 id="h3">Chennai</h3>
+            <div class="three">
+                <p>2nd floor, 179, 1st Main Road, Nehru Nagar, Lane Opp to Turyaa Hotel, Perungudi, Chennai - 600096 </p>
+                <div class="aa">
+                    <i class="fa-solid fa-phone fa-xs"></i>
+                    <p><a href="tel:+91 94442 22459">+91 94442 22459</a></p>
+                </div>
+                <div class="aa">
+                    <i class="fa-solid fa-headset fa-xs"></i>
+                    <p><a href="tel:044 24543969">044 24543969</a></p>
+                </div>
+                <div class="aa">
+                    <i class="fa-solid fa-envelope fa-xs"></i>
+                    <p><a href="mailto:info.chen@vectorindia.org">info.chen@vectorindia.org</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <h3 id="h3">Company</h3>
+            <div class="four">
+                <a href="#">About Vector India</a>
+                <a href="#">Careers</a>
+                <a href="#">Testimonals</a>
+                <a href="#">Gallery</a>
+                <a href="#">FAQ's</a>
+                <a href="#">Policies</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Site Map</a>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>
