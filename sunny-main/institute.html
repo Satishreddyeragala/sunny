@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .fa-solid{
+            color: #eb7a24;
+            padding-top: 4px;
+        }
+        .cd{
+            display: flex;
+            padding:8px;
+            align-items: center;
+        }
+        .cd p{
+            display: flex;
+            justify-content: space-evenly;
+            padding-left: 10px;
+        }
+        .cd a{
+            text-decoration: none;
+            color: #fbfbfb;
+        }
+        nav{
+            background-color: rgb(35, 34, 34);
+            height:40px;
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .mnav{
+            width:32%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .mlinks{
+            width:45%;
+            display:flex;
+            margin-right:50px;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .mlinks a{
+            text-decoration: none;
+            color: rgb(226, 237, 237);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;  
+        }
+        .nav{
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 15vh;
+            background-color: #fbfbfb;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        .logo{
+            padding-left: 80px;
+            width: 250px;
+            height: 50px;
+        }
+        .links{
+            padding-right: 50px;
+            width:60%;
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .links a{
+            text-decoration: none;
+            color: cadetblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        .fa-solid{
+            color: #eb7a24;
+            padding-top: 4px;
+        }
+        .con{
+            width:100%;
+            height:30vh;
+            background-image: url("https://www.vectorindia.org/assets/images/courses-bg.jpg");
+            background-size: 100% 100%;
+            padding: 60px;
+        }
+        .con h1{
+            font-size: 33px;
+            color: #ffffff;
+            line-height: 52px;
+            font-weight: 700;
+            font-family: proxima_novaregular, sans-serif;
+        }
+        .con p{
+            width:300px;
+            font-size:14px;
+            font-weight: 400;
+            color: #f4eaea;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container{
+            width:90%;
+            height:118vh;
+        }
+        .container p{
+            padding-left:10%;
+            padding-top:18px;
+            font-size: 14px;
+            line-height: 28px;
+            font-weight: 500;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #434345;
+        }
+        .container p:nth-child(1){
+            padding-top: 60px;
+        }
+        .container h2{
+            padding-left:10%;
+            padding-top:20px;
+            margin-bottom: 10px;
+            color: #eb7a24;
+            font-size: 35px;
+            font-weight: 500;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        footer{
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 30px;
+            width:100%;
+            height:60vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            background-image: url("footer.jpg");
+            background-size: 100% 100%;
+        }
+            .hyd,.bang,.chen,.about{
+                margin-top: 30px;
+                width:20%;
+                height: 50vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+            .one,.two,.three,.four{
+                display: flex;
+                height:40vh;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: flex-start;
+            }
+            .one p,.two p,.three p{
+                padding-bottom: 8px;
+                color: antiquewhite;
+                font-size: 16px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            #h3{
+                text-align: left;
+                padding-bottom: 10px;
+                border-bottom: 2px solid green;
+                color: aqua;
+                font-size: 17px;
+                font-weight: 600;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .fa-solid{
+                color: #eb7a24;
+            }
+            .aa{
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            a:hover{
+                color: blue;
+            }
+            .aa p{
+                display: flex;
+                justify-content: space-evenly;
+                padding-left: 10px;
+                padding-top: 10px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            .aa a{
+                text-decoration: none;
+                color: #fbfbfb;
+            }
+            .aa a:hover{
+                color: blue;
+            }
+            .four a{
+                text-decoration: none;
+                color: #fbfbfb;
+                font-size: 16px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                padding-bottom: 10px;
+                position: relative;
+                transition: transform .5s;
+            }
+
+            .four a:hover
+            {
+                transform: translateX(20px);
+            }
+            .four a:nth-child(1)
+            {
+                padding-top: 20px;
+            }
+
+            .four a::before
+            {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 3px;
+                border-radius: 1.5px;
+                background-color: orangered;
+                top:8px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all .5s;
+            }
+
+            .four a:nth-child(1):before
+            {
+                top: 28px;
+            }
+            .four a:hover::before{
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(-20px);
+            } 
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="mnav">
+            <div class="cd">
+                <i class="fa-solid fa-envelope fa-xs"></i>
+                <p><a href="mailto:info.vectorindia.org">info@vectorindia.org</a></p>
+            </div>
+            <div class="cd">
+                <i class="fa-solid fa-phone fa-xs"></i>
+                <p><a href="tel:+91 9866666699">+91 9866666699</a></p>
+            </div>
+        </div>
+        <div class="mlinks">
+            <a href="addmission.html">Admission</a>
+            <a href="vlogin.html">Student login</a>
+            <a href="applyonline.html">Apply Online</a>
+            <a href="#">Quick Enquiry</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+    </nav>
+    <div class="nav">
+        <a href="vector.html"><img src="vector.png" class="logo"></a>
+        <div class="links">
+            <a href="#">Institute</a>
+            <a href="#">Embedded Systems</a>
+            <a href="#">Full Stack Development</a>
+            <a href="#">Workshops</a>
+            <a href="#">Placements</a>
+        </div>
+    </div>
+    <div class="con">
+        <p>HOME  /ABOUT VECTOR INDIA  </p>
+        <h1>ABOUT VECTOR INDIA</h1>
+    </div>
+    <div class="container">
+        <p>Vector India was established with a vision to drive enthusiastic freshers by bridging the gap between industry requirements and enhancing their skill set. We are a pioneer in the field of embedded 
+            systems training with over 17 years of meritorious competency. It’s India’s first ISO 9001:2015 certified embedded systems training institute that has won several awards and accolades for its exceptional endeavor in this field. 
+            With comprehensive capabilities, incomparable experience, and extensive research, we have become a pioneer in the embedded field. We benefit both companies and candidates, by sourcing well-trained Industry ready professionals to companies and by placing 
+            the right candidate with appropriate knowledge in the right company.
+        </p>
+        <p>Vector India has its training centers in Hyderabad, Bangalore, and Chennai, our training program offers comprehensive training with a well-integrated approach towards the embedded system. The training programs conducted by us not only improve knowledge 
+            but increases the efficiency of the students in the field of embedded technology.
+        </p>
+        <p>We always maintained quality, trust, and camaraderie as a trusted ally with over 50,000 alumni, and 650 corporate and Tech organizations. We always strive to equal every day as we redefine the nature of the training program and go that extra mile ahead in providing greater value to the corporate, 
+            be it in terms of providing an adequate workforce proficiency in highly application - oriented Embedded Systems or in terms of organizing training programs in Embedded Technologies for in-house personnel and virtual training platform by the subject matter experts.
+        </p>
+        <h2>Our Achievement</h2>
+        <p>VECTOR India has been named India's Best Training Institute for Embedded Systems, a rare distinction. This was accomplished by adhering to a high-quality Embedded Course curriculum. In addition, we are also known for ensuring that our students receive authentic and real-time Embedded project experience and placements. 
+            This is accomplished through a participatory, application-oriented training approach.
+        </p>
+        <p>
+            Through 100% placement help and lateral placements, 
+            we have a commendable and ever-improving placement record. While admission to Vector India's Embedded Systems program is solely based on the All India online Admission Test.
+        </p>
+        <p>We're on a quest to change the world, build an empire, and leave a legacy.</p>
+    </div>
+    <footer>
+        <div class="hyd">
+            <h3 id="h3">Hyderabad</h3>
+            <div class="one">
+                <p>#502, Nagasuri Plaza, Behind Maithrivanam, Ameerpet, Hyderabad - 500038.</p>
+                <div class="aa">
+                    <i class="fa-solid fa-phone fa-xs"></i>
+                    <p><a href="tel:+91 98666 66699">+91 98666 66699</a></p>
+                </div>
+                <div class="aa">
+                    <i class="fa-solid fa-headset fa-xs"></i>
+                    <p><a href="tel:040 23 73 6669">040 23 73 6669</a></p>
+                </div>
+                <div class="aa">
+                    <i class="fa-solid fa-envelope fa-xs"></i>
+                    <p><a href="mailto:info.vectorindia.org">info@vectorindia.org</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="bang">
+            <h3 id="h3">Bangalore </h3>
+            <div class="two">
+                <p>33/49, 27th Cross, 12th Main, Jayanagar 4th block, Bangalore - 560011.</p>
+                <div class="aa">
+                    <i class="fa-solid fa-phone fa-xs"></i>
+                    <p><a href="tel:+91 87624 56789">+91 87624 56789</a></p>
+                </div>
+                <div class="aa">
+                    <i class="fa-solid fa-headset fa-xs"></i>
+                    <p><a href="tel:080 26546474">080 26546474</a></p>
+                </div>
+                <div class="aa">
+                    <i class="fa-solid fa-envelope fa-xs"></i>
+                    <p><a href="mailto:info.blr@vectorindia.org">info.blr@vectorindia.org</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="chen">
+            <h3 id="h3">Chennai</h3>
+            <div class="three">
+                <p>2nd floor, 179, 1st Main Road, Nehru Nagar, Lane Opp to Turyaa Hotel, Perungudi, Chennai - 600096 </p>
+                <div class="aa">
+                    <i class="fa-solid fa-phone fa-xs"></i>
+                    <p><a href="tel:+91 94442 22459">+91 94442 22459</a></p>
+                </div>
+                <div class="aa">
+                    <i class="fa-solid fa-headset fa-xs"></i>
+                    <p><a href="tel:044 24543969">044 24543969</a></p>
+                </div>
+                <div class="aa">
+                    <i class="fa-solid fa-envelope fa-xs"></i>
+                    <p><a href="mailto:info.chen@vectorindia.org">info.chen@vectorindia.org</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <h3 id="h3">Company</h3>
+            <div class="four">
+                <a href="#">About Vector India</a>
+                <a href="#">Careers</a>
+                <a href="#">Testimonals</a>
+                <a href="#">Gallery</a>
+                <a href="#">FAQ's</a>
+                <a href="#">Policies</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Site Map</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
