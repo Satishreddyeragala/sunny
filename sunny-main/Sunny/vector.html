@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <style>
         *{
             margin:0%;
             padding:0%;
             box-sizing: border-box;
+        }
+        body
+        {
+            position: relative;
         }
         nav{
             background-color: rgb(35, 34, 34);
@@ -280,7 +283,6 @@
             visibility: hidden;
             transition: all .5s;
         }
-
         .four a:nth-child(1):before
         {
             top: 28px;
@@ -289,6 +291,74 @@
             opacity: 1;
             visibility: visible;
             transform: translateX(-20px);
+        }
+        #esr {
+	       text-align: center;
+           font-size: 20px;
+           font-weight: 500;
+           color: #202122;
+           font-family: Verdana, Geneva, Tahoma, sans-serif; 
+           padding-bottom: 10px;
+        }
+        .model-box {
+	       padding: 12px 24px 24px 24px;
+	       margin: 48px 12px;
+           width:25%;
+	       background: #7d878e;
+	       border-radius: 4px;
+        }
+        input[type=text],input[type=email], textarea,select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        input[type=submit] {
+	        background-color: #eb7a24;
+	        color: white;
+	        border: 0;
+	        padding: 12px 24px;
+	        border-radius: 4px;
+	        position: relative;
+            left:30%;
+	        display: inline-block;
+	        text-align: center;
+        }
+        input[type=submit]:hover {
+	        background: #2196F3;
+            cursor: pointer;
+        }
+        select,option{
+            color: rgb(41, 40, 40);
+        }
+        .wrapper{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            background-color:rgba(26, 24, 24, 0.58) ;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .5s;
+        }
+        .change.wrapper{
+            opacity: 1;
+            visibility: visible ;
+        }
+        .fa-xmark{
+            font-size: 20px;
+            position: relative;
+            left:95%;
+            color: rgb(223, 176, 115);
+            cursor: pointer;
         }
     </style>
 </head>
@@ -308,7 +378,7 @@
             <a href="addmission.html">Addmission</a>
             <a href="vlogin.html">Student login</a>
             <a href="applyonline.html">Apply Online</a>
-            <a href="#">Quick Enquiry</a>
+            <a href="enquiry.html" class="quick_enquiry_btn">Quick Enquiry</a>
             <a href="gallery.html">Gallery</a>
         </div>
     </nav>
@@ -317,16 +387,16 @@
         <div class="links">
             <a href="institute.html">Institute</a>
             <a href="#">Embedded Systems</a>
-            <a href="#">Full Stack Development</a>
+            <a href="full_stack.html">Full Stack Development</a>
             <a href="#">Workshops</a>
             <a href="#">Placements</a>
         </div>
     </div>
     <div class="con2">
        <div class="con3">
-        <h1>India's No 1 training Institute</h1>
-        <p>To become a full-stack developer now you can join with us.</p>
-        <a href="#" id="b1">Click me join</a>
+            <h1>India's No 1 training Institute</h1>
+            <p>To become a full-stack developer now you can join with us.</p>
+            <a href="#" id="b1">Click me join</a>
        </div>
     </div>
     <div class="coursetitle">
@@ -432,5 +502,50 @@
             </div>
         </div>
     </footer>
+
+    <div class="wrapper">
+        <div class="model-box">
+            <i class="fa-solid fa-xmark btn-close"></i>
+            <h3 id="esr">Request A Call Back</h3>
+            <form action="#" name="contact_form">
+                <input name="first_name" type="text" required placeholder="Full Name"/>
+                <br>
+                <input name="email" type="email" required placeholder="Email ID"/>
+                <br>
+                <input name="last_name" type="text" required placeholder="Mobile Number"/>
+                <br>
+                <select id="Course51" name="Course51">
+                    <option selected disabled hidden style="display: block;">Course Interested For</option>
+                    <option value="Embedded Systems Regular">Embedded Systems Regular</option>
+                    <option value="Embedded Systems Online">Embedded Systems Online</option>
+                    <option value="Full Stack Development">Full Stack Development</option>
+                    <option value="Automotive Embedded">Automotive Embedded</option>
+                    <option value="Micro Python">Micro Python</option>
+                    <option value="Python">Python</option>
+                    <option value="Autosar">Autosar</option>
+                    <option value="Device Drivers">Device Drivers</option>
+                    <option value="IOT and Beyond">IOT and Beyond</option>
+                    <option value="Embedded C">Embedded C</option>
+                </select><br>
+                <textarea rows="4" name="enquiry" placeholder="Enquiry"></textarea>
+                <div class="center">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>	
+        </div>
+    </div>
+
+    <script>
+        const quick_enquiry_btn = document.querySelector(".quick_enquiry_btn");
+        const wrapper = document.querySelector('.wrapper');
+        const closeBtn = document.querySelector('.btn-close');
+        quick_enquiry_btn.addEventListener('click',(e)=>{
+            e.preventDefault();
+            wrapper.classList.add('change');})
+        closeBtn.addEventListener('click',()=>
+        {
+            wrapper.classList.remove('change');
+        })
+    </script>
 </body>
 </html>
